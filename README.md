@@ -62,7 +62,7 @@ pip install -r requirements.txt
     ```json
     {
       "x_preds": "list[data_x]",
-      "y_expected": "list["N"]"
+      "y_expected": "list[N]"
     }
     ```
 
