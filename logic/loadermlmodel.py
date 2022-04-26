@@ -10,6 +10,6 @@ class RegModel:
   def predict(self):
     return {"prediction": self.model.predict(self.data)[0]}
 
-  def rsqr(self):
+  def rsqr(self, json_data):
     # TODO: Implement
-    pass
+    print(json_data)
