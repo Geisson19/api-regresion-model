@@ -2,6 +2,12 @@
 
 Usando el pipeline del modelo de regresión, se crea una API que expone las siguientes rutas:
 
+# Integrantes - Grupo 10
+
+- Juanpablo Barriga
+- Lina Sierra
+- Geisson Ponce
+
 # Instalación
 
 Usar el siguiente comando para instalar las dependecias de la API:
@@ -20,72 +26,72 @@ pip install -r requirements.txt
 
   ```json
   {
-  "adult_mortality": float,
-  "infant_deaths": float,
-  "alcohol": float,
-  "percentage_expenditure": float,
-  "hepatitis_B": float,
-  "measles": float,
-  "bmi": float,
-  "under_five_deaths": float,
-  "polio": float,
-  "total_expenditure": float,
-  "diphtheria": float,
-  "hiv_aids": float,
-  "gdp": float,
-  "population": float,
-  "thinness_1float_19_years": float,
-  "thinness_5_9_years": float,
-  "income_composition_of_resources": float,
-  "schooling": float
+    "adult_mortality": "N",
+    "infant_deaths": "N",
+    "alcohol": "N",
+    "percentage_expenditure": "N",
+    "hepatitis_B": "N",
+    "measles": "N",
+    "bmi": "N",
+    "under_five_deaths": "N",
+    "polio": "N",
+    "total_expenditure": "N",
+    "diphtheria": "N",
+    "hiv_aids": "N",
+    "gdp": "N",
+    "population": "N",
+    "thinness_10_19_years": "N",
+    "thinness_5_9_years": "N",
+    "income_composition_of_resources": "N",
+    "schooling": "N"
   }
   ```
 
-  (Donde `float` es un número decimal)
+  (Donde `"N"` es un número decimal)
 
   - `data`: JSON con los datos de entrada.
 
   - Respuesta: Predicción del modelo de la espectativa de vida
 
-- **_/api/predicts_**
+  - **_/api/predicts_**
 
-  - Método: POST
+    - Método: POST
 
-  - Modelo del cuerpo:
+    - Modelo del cuerpo:
 
-  ```json
-  {
-    x_preds: list[data_x]
-    y_expected: list[float]
-  }
-  ```
+    ```json
+    {
+      "x_preds": "list[data_x]",
+      "y_expected": "list["N"]"
+    }
+    ```
 
-  Donde `data_x` es un objeto con los siguientes campos:
-  data_x:
+    Donde `data_x` es un objeto con los siguientes campos:
+    data_x:
 
-  ```
-  {
-  "adult_mortality": float,
-  "infant_deaths": float,
-  "alcohol": float,
-  "percentage_expenditure": float,
-  "hepatitis_B": float,
-  "measles": float,
-  "bmi": float,
-  "under_five_deaths": float,
-  "polio": float,
-  "total_expenditure": float,
-  "diphtheria": float,
-  "hiv_aids": float,
-  "gdp": float,
-  "population": float,
-  "thinness_1float_19_years": float,
-  "thinness_5_9_years": float,
-  "income_composition_of_resources": float,
-  "schooling": float
-  }
-  ```
+    ```json
+    {
+      "adult_mortality": "N",
+      "infant_deaths": "N",
+      "alcohol": "N",
+      "percentage_expenditure": "N",
+      "hepatitis_B": "N",
+      "measles": "N",
+      "bmi": "N",
+      "under_five_deaths": "N",
+      "polio": "N",
+      "total_expenditure": "N",
+      "diphtheria": "N",
+      "hiv_aids": "N",
+      "gdp": "N",
+      "population": "N",
+      "thinness_10_19_years": "N",
+      "thinness_5_9_years": "N",
+      "income_composition_of_resources": "N",
+      "schooling": "N"
+    }
+    ```
 
-  y float es un número decimal
+    y "N" es un número decimal
 
   - Respuesta: R^2 del modelo
