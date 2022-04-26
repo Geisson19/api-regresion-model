@@ -15,12 +15,12 @@ app = FastAPI()
 def read_root():
   return {"Index": "Index Route"}
 
-@app.post("/predict")
+@app.post("/api/predict")
 def make_prediction(dataModel: DataModel):
   model = RegModel(dataModel)
   return model.predict()
 
-@app.post("/predicts")
+@app.post("/api/predicts")
 def make_predictions(xpredys: XpredYs):
   model = RsqrLogic()
   return model.rsqr(xpredys)
