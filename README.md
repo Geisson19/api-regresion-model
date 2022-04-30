@@ -10,10 +10,11 @@ Usando el pipeline del modelo de regresión, se crea una API que expone las sigu
 
 # Instalación
 
-Usar el siguiente comando para instalar las dependecias de la API:
+Usar el siguiente comando para instalar las dependecias de la API e iniciar el servidor de forma local
 
 ```bash
 pip install -r requirements.txt
+uvicorn app:app --reload
 ```
 
 # Rutas
