@@ -1,6 +1,6 @@
 # API Modelo de regresión ML
 
-Usando el pipeline del modelo de regresión, se crea una API que expone las siguientes rutas:
+Usando el pipeline del modelo de regresión, se crea una API que expone las rutas descritas a continuación para poder hacer uso del modelo creado en el Jupyter Notebook desde la web.
 
 # Integrantes - Grupo 10
 
