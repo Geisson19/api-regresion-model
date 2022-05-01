@@ -1,7 +1,7 @@
 from concurrent.futures import process
 from joblib import load
 import pandas as pd
-
+import numpy as np
 class RsqrLogic:
   def __init__(self):
     self.model = load("assets/pipeline.joblib")
@@ -36,10 +36,8 @@ class RsqrLogic:
     # Se procesan los datos del body
     x_preds, y_expected = self.process_data(json_data)
     # Deben tener las mismas dimensiones
-    if (len(x_preds) == len(y_expected)):
-    # Se calcula el r^2 con la funcion del modelo (score)
-      result = {"r^2": self.model.score(x_preds, y_expected)}
-    else:
-      result = {"Error": {"msg": "The number of rows in x_preds and y_expected are different"}}
-
-    return result
+    if len(x_preds) != len(y_expected):
+      return {"Error": {"msg": "The number of rows in x_preds and y_expected are different"}}
+    if len(x_preds) < 2:
+      return {"Error": {"msg": "The number of rows in x_preds is less than 2"}}
+    return {"rsqr": self.model.score(x_preds, y_expected)}
