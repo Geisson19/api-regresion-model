@@ -16,6 +16,12 @@ Usar el siguiente comando para instalar las dependecias de la API e iniciar el s
 pip install -r requirements.txt
 uvicorn app:app --reload
 ```
+En caso de que la instalacción de los paquetes de requirements no funciona se recomienda el uso de los siguientes paquete
+```
+pip install "uvicorn[standard]"
+pip install "fastapi"
+```
+
 
 # Rutas
 
