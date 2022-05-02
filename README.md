@@ -2,10 +2,9 @@
 
 Usando el pipeline del modelo de regresión, se crea una API que expone las rutas descritas a continuación para poder hacer uso del modelo creado en el Jupyter Notebook desde la web.
 
-# Integrantes - Grupo 10
+# Integrantes
 
 - Juanpablo Barriga
-- Lina Sierra
 - Geisson Ponce
 
 # Instalación
